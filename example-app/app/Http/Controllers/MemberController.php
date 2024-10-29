@@ -29,6 +29,8 @@ class MemberController extends Controller
 
 
     function delete($id){
+
+
         
         $data=Member::find($id);
         $data->delete();   
@@ -42,7 +44,9 @@ class MemberController extends Controller
         return view('edit',["data"=>$data]);
     }
 
+
     function update(Request $req){
+
      // insert with elequent model
         $data=Member::find($req->id);
         $data->name=$req->name;
@@ -52,6 +56,7 @@ class MemberController extends Controller
         return redirect('list');
 
     }
+    
 
     function operations(){
        

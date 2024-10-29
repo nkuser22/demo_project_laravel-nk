@@ -26,15 +26,27 @@ class DeviceController extends Controller
         $device = Device::find($req->id);
         $device->name=$req->name;
         $device->member_id=$req->member_id;
+
+
+
+        
+
         $result=$device->save();
         if($result){
             return ['data'=> 'Data has been Updated Succcessful!'];
         }else{
             return ['data'=> 'Updated Operation Failed!'];
+
+
         }
     }
 
 
+
+
+
+
+    
     function delete($id){
         $device = Device::find($id);
         $res=$device->delete();
@@ -61,4 +73,5 @@ class DeviceController extends Controller
     }
 
 
+    
 }

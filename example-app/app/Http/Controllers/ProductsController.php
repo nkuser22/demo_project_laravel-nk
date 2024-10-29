@@ -11,6 +11,7 @@ class ProductsController extends Controller
         // inline blade template
        return Blade::render("<h1>Product List</h1>");
     }
+    
 
     function addproduct(){
 
